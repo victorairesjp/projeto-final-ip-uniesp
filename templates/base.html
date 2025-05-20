@@ -1,0 +1,45 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar" style="min-height:100vh; transition: width 0.3s, min-width 0.3s;">
+      <button class="btn btn-sm btn-outline-secondary w-100 mb-3" id="toggleSidebar" type="button">
+        <span id="sidebarIcon" class="bi bi-list"></span>
+      </button>
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="/variaveis">Variáveis</a></li>
+          <li class="nav-item"><a class="nav-link" href="/tipos-dados">Tipos de Dados</a></li>
+          <li class="nav-item"><a class="nav-link" href="/estruturas-controle">Estruturas de Controle</a></li>
+          <li class="nav-item"><a class="nav-link" href="/funcoes">Funções</a></li>
+          <li class="nav-item"><a class="nav-link" href="/listas">Listas</a></li>
+          <li class="nav-item"><a class="nav-link" href="/dicionarios">Dicionários</a></li>
+          <li class="nav-item"><a class="nav-link" href="/sobre-equipe">Sobre a Equipe</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="col" id="mainContent" style="transition: margin-left 0.3s, width 0.3s;">
+      {% block conteudo_principal %}{% endblock %}
+    </main>
+  </div>
+</div>
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggleSidebar');
+  const sidebarIcon = document.getElementById('sidebarIcon');
+  const mainContent = document.getElementById('mainContent');
+  let collapsed = false;
+  toggleBtn.onclick = function() {
+    collapsed = !collapsed;
+    if (collapsed) {
+      sidebar.classList.add('sidebar-collapsed');
+      mainContent.classList.add('main-expanded');
+    } else {
+      sidebar.classList.remove('sidebar-collapsed');
+      mainContent.classList.remove('main-expanded');
+    }
+  };
+</script>
+{% endblock %}

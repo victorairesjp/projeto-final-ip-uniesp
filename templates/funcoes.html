@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block conteudo_principal %}
+<h2>Funções</h2>
+<p>Funções são blocos de código reutilizáveis que executam uma tarefa específica. Elas ajudam a organizar o código e evitar repetição.</p>
+<h4>Sintaxe Básica</h4>
+<pre><code>def saudacao():
+    print("Olá!")
+
+saudacao()  # Chamada da função
+</code></pre>
+<h4>Funções com Parâmetros</h4>
+<pre><code>def soma(a, b):
+    return a + b
+
+resultado = soma(2, 3)
+print(resultado)  # saída: 5
+</code></pre>
+<h4>Parâmetros Opcionais e Valor Padrão</h4>
+<pre><code>def apresentar(nome, saudacao="Olá"):
+    print(f"{saudacao}, {nome}!")
+
+apresentar("Ana")  # Olá, Ana!
+apresentar("João", "Oi")  # Oi, João!
+</code></pre>
+<h4>Retorno de Valores</h4>
+<pre><code>def quadrado(x):
+    return x * x
+
+print(quadrado(4))  # saída: 16
+</code></pre>
+<h4>Documentação de Funções</h4>
+<pre><code>def dobro(n):
+    """Retorna o dobro do número informado."""
+    return n * 2
+
+help(dobro)
+</code></pre>
+<h4>Indentação</h4>
+<p>O bloco de código de uma função deve ser indentado (4 espaços por padrão):</p>
+<pre><code>def exemplo():
+    print("Linha 1")
+    print("Linha 2")
+</code></pre>
+<h4>Funções Anônimas (lambda)</h4>
+<pre><code>dobro = lambda x: x * 2
+print(dobro(5))  # saída: 10
+</code></pre>
+{% endblock %}

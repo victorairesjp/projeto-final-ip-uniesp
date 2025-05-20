@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block conteudo_principal %}
+<h2>Listas</h2>
+<p>Listas armazenam coleções de valores e são mutáveis:</p>
+<pre><code>frutas = ["maçã", "banana", "laranja"]
+print(frutas[0])  # saída: maçã
+</code></pre>
+<ul>
+  <li><b>Adicionar elementos:</b> <code>frutas.append("uva")</code></li>
+  <li><b>Remover elementos:</b> <code>frutas.remove("banana")</code></li>
+  <li><b>Tamanho da lista:</b> <code>len(frutas)</code></li>
+  <li><b>Fatiamento:</b> <code>frutas[1:3]</code> retorna <code>["banana", "laranja"]</code></li>
+</ul>
+<pre><code>for fruta in frutas:
+    print(fruta)
+</code></pre>
+<p>Listas podem conter diferentes tipos de dados, inclusive outras listas.</p>
+{% endblock %}

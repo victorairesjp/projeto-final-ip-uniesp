@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block conteudo_principal %}
+<h2>Tipos de Dados</h2>
+<p>Python possui diversos tipos de dados fundamentais. Os principais são:</p>
+<ul>
+  <li><b>int</b>: números inteiros (<code>idade = 20</code>)</li>
+  <li><b>float</b>: números decimais (<code>altura = 1.75</code>)</li>
+  <li><b>str</b>: textos (<code>nome = "Maria"</code>)</li>
+  <li><b>bool</b>: valores lógicos (<code>True</code> ou <code>False</code>)</li>
+</ul>
+<h4>Exemplos de Uso</h4>
+<pre><code>idade = 30           # int
+altura = 1.82       # float
+nome = "Carlos"     # str
+aprovado = True     # bool
+</code></pre>
+<h4>Verificando o tipo de uma variável</h4>
+<pre><code>print(type(idade))    # <class 'int'>
+print(type(altura))   # <class 'float'>
+print(type(nome))     # <class 'str'>
+print(type(aprovado)) # <class 'bool'>
+</code></pre>
+<h4>Conversão de Tipos</h4>
+<p>Você pode converter entre tipos usando funções como <code>int()</code>, <code>float()</code>, <code>str()</code>:</p>
+<pre><code>nota = "9.5"
+nota_float = float(nota)  # converte string para float
+print(nota_float)
+</code></pre>
+<h4>Tipos Compostos</h4>
+<ul>
+  <li><b>list</b>: lista de valores (<code>frutas = ["maçã", "banana"]</code>)</li>
+  <li><b>tuple</b>: tupla, semelhante à lista, mas imutável (<code>coordenadas = (10, 20)</code>)</li>
+  <li><b>dict</b>: dicionário, pares chave-valor (<code>aluno = {"nome": "Ana", "idade": 20}</code>)</li>
+  <li><b>set</b>: conjunto de valores únicos (<code>numeros = {1, 2, 3}</code>)</li>
+</ul>
+<h4>Exemplo de uso de tipos compostos</h4>
+<pre><code>lista = [1, 2, 3]
+tupla = (4, 5, 6)
+dicionario = {"a": 1, "b": 2}
+conjunto = {7, 8, 9}
+</code></pre>
+{% endblock %}

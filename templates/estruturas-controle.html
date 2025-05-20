@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block conteudo_principal %}
+<h2>Estruturas de Controle</h2>
+<p>Estruturas de controle permitem tomar decisões e repetir ações em Python. As principais são:</p>
+<h4>Condicionais (<code>if</code>, <code>elif</code>, <code>else</code>)</h4>
+<pre><code>idade = 18
+if idade &gt;= 18:
+    print("Maior de idade")
+elif idade &gt;= 12:
+    print("Adolescente")
+else:
+    print("Criança")
+</code></pre>
+<p>Note a importância da identação: o bloco de código dentro do <code>if</code>, <code>elif</code> e <code>else</code> deve ser identado (4 espaços).</p>
+<h4>Laço <code>for</code></h4>
+<pre><code>for i in range(5):
+    print(i)
+# Saída: 0 1 2 3 4
+</code></pre>
+<p>O <code>for</code> é usado para percorrer sequências (listas, strings, etc).</p>
+<h4>Laço <code>while</code></h4>
+<pre><code>contador = 0
+while contador &lt; 3:
+    print("Contador:", contador)
+    contador += 1
+</code></pre>
+<h4>Comandos de Controle</h4>
+<ul>
+  <li><code>break</code>: interrompe o laço</li>
+  <li><code>continue</code>: pula para a próxima iteração</li>
+</ul>
+<pre><code>for numero in range(5):
+    if numero == 3:
+        break
+    print(numero)
+# Saída: 0 1 2
+</code></pre>
+<h4>Exemplo Completo</h4>
+<pre><code>notas = [7, 8, 6, 9]
+soma = 0
+for nota in notas:
+    soma += nota
+media = soma / len(notas)
+if media &gt;= 7:
+    print("Aprovado")
+else:
+    print("Reprovado")
+</code></pre>
+{% endblock %}

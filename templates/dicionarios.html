@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block conteudo_principal %}
+<h2>Dicionários</h2>
+<p>Dicionários armazenam pares de chave e valor. São úteis para representar dados estruturados:</p>
+<pre><code>aluno = {"nome": "Maria", "idade": 20}
+print(aluno["nome"])  # saída: Maria
+</code></pre>
+<ul>
+  <li><b>Adicionar/alterar valor:</b> <code>aluno["curso"] = "Python"</code></li>
+  <li><b>Remover valor:</b> <code>del aluno["idade"]</code></li>
+  <li><b>Verificar chaves:</b> <code>aluno.keys()</code></li>
+  <li><b>Verificar valores:</b> <code>aluno.values()</code></li>
+</ul>
+<pre><code>for chave, valor in aluno.items():
+    print(chave, valor)
+</code></pre>
+<p>Dicionários são muito usados para representar objetos e dados em formato JSON.</p>
+{% endblock %}

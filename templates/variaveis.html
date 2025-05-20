@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block conteudo_principal %}
+<h2>Variáveis</h2>
+<p>Variáveis são usadas para armazenar valores em Python. Elas são criadas no momento em que você atribui um valor a um nome. Não é necessário declarar o tipo da variável explicitamente, pois Python é uma linguagem de tipagem dinâmica.</p>
+<h4>Sintaxe Básica</h4>
+<pre><code>nome = "João"
+idade = 25
+altura = 1.75
+</code></pre>
+<p>O nome da variável deve começar com uma letra ou sublinhado (_), não pode conter espaços ou caracteres especiais (exceto _), e diferencia maiúsculas de minúsculas (<code>idade</code> e <code>Idade</code> são diferentes).</p>
+<h4>Boas Práticas de Nomeação</h4>
+<ul>
+  <li>Use nomes descritivos: <code>nota_final</code> ao invés de <code>nf</code></li>
+  <li>Evite palavras reservadas do Python (ex: <code>class</code>, <code>def</code>)</li>
+  <li>Use snake_case para múltiplas palavras: <code>media_turma</code></li>
+</ul>
+<h4>Exemplo Completo</h4>
+<pre><code># Atribuição de variáveis
+nome = "Ana"
+idade = 20
+altura = 1.68
+
+# Exibindo valores
+print("Nome:", nome)
+print("Idade:", idade)
+print("Altura:", altura)
+</code></pre>
+<h4>Reatribuição</h4>
+<p>Você pode mudar o valor de uma variável a qualquer momento:</p>
+<pre><code>idade = 21  # Agora idade vale 21
+</code></pre>
+<h4>Identação</h4>
+<p>Python usa identação para definir blocos de código. Exemplo:</p>
+<pre><code>if idade &gt;= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")
+</code></pre>
+<p>Note que o bloco do <code>if</code> está identado com 4 espaços (ou um tab, mas o padrão é 4 espaços).</p>
+{% endblock %}
